@@ -11,7 +11,7 @@ Lower Bound - *S.lower_bound(21) !! RETURNS VALUE, NOT INDEX (<=21)
 Upper Bound - *S.upper_bound(21) !! RETURNS VALUE, NOT INDEX	(>21)
 Vector to Set - set<int> s(all(v)) !! SORTS AS WELL
 
-------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
 
 MACROS
 #define present(cont,elem) (cont.find(elem)!=cont.end())
