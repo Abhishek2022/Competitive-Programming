@@ -1,0 +1,38 @@
+Implementation Tricks
+
+
+**BIT Manipulation.
+    Checking if number is power of 2
+    -- Simple solution - 
+        counter = n&(n-1)
+        Problem - positive result for n = 0.
+    -- Optimized solution - 
+	    counter = n && (!(n&(n-1)));
+
+**2^p divides n, max value of 2^p
+    int x = n&(-n);
+
+**Number of set bits in a number
+    int x = __builtin_popcount(n);
+
+**Checking if xth bit from right is set
+    bool p = n&(1<<=x);   !!If non-zero, means set bit. 
+
+**Setting xth bit from right
+    n = n|(1<<x);
+
+
+
+**Concatenate two objects
+	#define merge(a,b) a##b;
+	int main()
+	{
+		printf(“%d”,merge(12,34));
+	}
+		-- 1234
+
+**Truncate, Round, SetPrecision
+    double a = 3.50;
+    cout<<trunc(a)<<endl;					//	3
+    cout<<round(a)<<endl;					//	4
+    cout<<fixed<<setprecision(3)<<a<<endl;		//	3.500

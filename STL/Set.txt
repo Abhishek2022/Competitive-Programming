@@ -1,0 +1,17 @@
+SET
+
+FUNCTIONS
+Insert - S.insert(25);	!! O(logN)
+Size - S.size();			!! O(1)
+Empty - S.empty();
+Traversal - tr(S,it) {cout<<*it;}	!! SET HAS NO INDEX
+Find - S.find(42);		!! METHOD, NOT A FUNCTION
+Erase - S.erase(42);
+Lower Bound - *S.lower_bound(21) !! RETURNS VALUE, NOT INDEX (<=21)
+Upper Bound - *S.upper_bound(21) !! RETURNS VALUE, NOT INDEX	(>21)
+Vector to Set - set<int> s(all(v)) !! SORTS AS WELL
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+MACROS
+#define present(cont,elem) (cont.find(elem)!=cont.end())

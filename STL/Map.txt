@@ -1,0 +1,8 @@
+MAP
+
+FUNCTIONS
+Initialization - map<string,int> M; M[“ab”]=13;	!! DEFAULT = 0
+Traversing - tr(M,it) {cout<<it->first<<it->second;} !! ASCENDING
+Find - present(M,”ab”);  !! M[] CREATES OBJECTS IF IT DOESN’T EXIST
+
+

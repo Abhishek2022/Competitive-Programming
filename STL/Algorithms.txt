@@ -1,0 +1,9 @@
+Swap - swap(a,b);
+Max - max(a,b);
+Min - min(a,b);
+GCD - __gcd(a,b);
+Next Permutation - vi v ={1,2,3}; do{}while(next_permutation(all(v)); !! SHOULD BE SORTED
+Previous Permutation - prev_permutation(all(v));
+long double power - powl(long double, long double);
+Memset - int arr[10]; memset(arr,-1,sizeof(arr)) !! ONLY -1 OR 0
+

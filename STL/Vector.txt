@@ -1,0 +1,61 @@
+VECTOR
+
+--Initialization
+    vector <int> A(10,-1);           // 10 elements initialized to -1
+    vector <int> B(A);					 // copy A
+    vector <int> C(A.begin()+k1,A.begin+k2());   // copy subarray
+    vector <int> D = { 11,2,3,14 };
+
+--Sorting
+    sort(A.begin(),A.end());	// Ascending
+    sort(A.rbegin(),A.rend());	// Descending
+	
+--Binary Search
+    bool present = binary_search(A.begin(), A.end(), 3); 
+
+--Lower/Upper Bound
+    auto it1 = lower_bound(A.begin(), A.end(), 100);  // (<=100)
+    auto it2 = upper_bound(A.begin(), A.end(), 100);	 // (>100)
+    int freq = it2 - it1;					 	 // frequency
+
+--Efficient element accessing
+	for (int x : A)
+		cout << x << " ";
+
+	for (int &x : A)						// using reference
+	{
+		x++;
+		cout << x << " ";
+	}
+
+--2D vectors
+    vector< vector< int> > matrix(m , vector<int>(n,-1));//m*n matrix
+
+--Vector in a function
+    void foo(vector<int> v)        //do not do!!
+    void foo(const vector<int> &v) //do if you don’t change vector
+    void foo(vector<int> &v) 	 //do if you change vector 
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+FUNCTIONS
+Size -        A.size();	!! MAY NOT BE O(n) !! UNSIGNED
+Begin -       A.begin();
+End -         A.end()        !! POINTS TO AN OBJECT AFTER LAST ELEMENT
+Empty -       A.empty();
+Resize -      A.resize(); OR v.resize(length);
+Insert -      A.insert(5,42); OR A.insert(5,B.begin(),B.end());	!! O(n)
+Shrink -      A.shrink_to_fit();
+Reverse -     reverse(A.begin()+k1, A.begin()+k2);
+Find - 	      find(A.begin(),A.begin()+k,7); 	!! NOT FOUND - v.begin()+k
+Max Element - *max_element(A.begin(),A.begin()+k);   		!! VALUE
+Min Element - min_element(A.begin(),A.begin()+k)-A.begin(); !! INDEX
+Erase - 	   erase(A.begin()+K); OR erase(A.begin(),A.begin()+k); 
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+MACROS
+#define all(A) A.begin(),A.end()
+#define tr(cont,it) \
+	for(auto it = cont.begin(); it!=cont.end(); it++)
+#define cpresent(cont,element) (find(all(cont),element)!=cont.end())
