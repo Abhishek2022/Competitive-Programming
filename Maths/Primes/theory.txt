@@ -1,0 +1,36 @@
+Prime Check - Probabilistic
+ 
+-- Ideal for testing very large numbers 
+https://cp-algorithms.com/algebra/primality_tests.html
+
+
+1. Fermat’s Little Theorem
+Let p be a prime number and a such that 1<a<p-1. Then
+a^(p-1) = 1(mod p)
+
+-- If condition fails, we can strongly confirm non-primality. If condition, holds, it is difficult to confirm.
+-- For certain values of p, the condition holds for all a, given gcd(p,a) = 1. These are Carmichael numbers, exists 646 in 109.
+
+
+2. Miller Rabbin’s - Probabilistic + Deterministic
+-- Extension of Fermat’s little theorem.
+-- For an odd number, n-1 is even and can be written as n-1=(2^s)*d.
+-- From Fermat’s theorem, 
+ n-1 = 1(mod n)
+a^((2^s)*d) = 1(mod n)
+			a^((2^s)*d) - 1 = 0(mod n)
+			(a^((2^s)*(d-1)) - 1)(a^((2^s)*(d-1)) + 1) = 0(mod n)
+			....
+			(a^((2^s)*(d-1)) - 1)(a^((2^s)*(d-1)) + 1)....(a^d-1)(a^d+1) = 0(mod n)
+
+-- Hence, following two conditions must satisfy	
+	-- ad = 1(mod n)
+	-- a^((2^r)*d) = -1(mod n)	where r = [0,s-1]
+
+-- The deterministic version puts a bound on the number of values of a that needs to be checked to confirm primality.
+	-- For 32 bit numbers - {2,3,5,7}
+	-- For 64 bit numbers - {2,3,5,7,11,13,17,19,23,29,31,37}
+
+-- For fastest check, 64 bit numbers can be done with just 7 numbers as well - {2,325,9375,28178,450775,9780504,1795265022}.
+-- Although as numbers other than 2 are not primes, we need to first check if the given number is a divisor of any of these numbers. It is same is checking for the set -  {2,3,5,13,19, 73,193,407521,299210837}
+					
