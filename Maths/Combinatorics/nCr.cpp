@@ -1,9 +1,10 @@
-//Calculating nCr
+/* CALCULATING nCr
 
-//--Using the identity nCr = (n-1)C(r-1) + (n-1)Cr.
-//--Storing the previous calculated values of nCr.
-//--This is faster when we need to calculate a large number of combinations, else using prod((i+r)/i) would be faster.
-	
+--Using the identity nCr = (n-1)C(r-1) + (n-1)Cr.
+--Storing the previous calculated values of nCr.
+--This is faster when we need to calculate a large number of combinations, else using prod((i+r)/i) would be faster.
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 

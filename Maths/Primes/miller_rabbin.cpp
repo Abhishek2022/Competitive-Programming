@@ -2,13 +2,15 @@
 
 long long binPow(long long a, long long b, long long p ) 
 {
-    if (b == 0)
-        return 1;
-    long long res = binPow(a, b/2,p);
-    if (b % 2)
-        return (res*res*a)%p;
-    else
-        return (res*res)%p;
+	long long res = 1;
+	while(b)
+	{
+		if(b&1)
+			res = res*a%p;
+		a = a*a%p;
+		b>>=1;
+	}
+	return res;
 }
 
 bool checkComp(long long n, long long a,long long d, long long s)
