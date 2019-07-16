@@ -42,6 +42,8 @@ FUNCTIONS
 Size -        A.size();	!! MAY NOT BE O(n) !! UNSIGNED
 Begin -       A.begin();
 End -         A.end()        !! POINTS TO AN OBJECT AFTER LAST ELEMENT
+Front -       A.front();     !! RETURNS VALUE 
+Back -        A.back();
 Empty -       A.empty();
 Resize -      A.resize(); OR v.resize(length);
 Insert -      A.insert(5,42); OR A.insert(5,B.begin(),B.end());	!! O(n)
@@ -50,7 +52,8 @@ Reverse -     reverse(A.begin()+k1, A.begin()+k2);
 Find - 	      find(A.begin(),A.begin()+k,7); 	!! NOT FOUND - v.begin()+k
 Max Element - *max_element(A.begin(),A.begin()+k);   		!! VALUE
 Min Element - min_element(A.begin(),A.begin()+k)-A.begin(); !! INDEX
-Erase - 	   erase(A.begin()+K); OR erase(A.begin(),A.begin()+k); 
+Pop_back -    A.pop_back();
+Erase - 	  A.erase(A.begin()+K); OR A.erase(A.begin(),A.begin()+k); 
 
 ----------------------------------------------------------------------------------------------------------------------------
 
